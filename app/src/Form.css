@@ -1,5 +1,9 @@
+.auto-style3 {
+    max-width: 100%;
+}
+
 #formBox {
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 20px;
   border: solid black 2px;
   width: 15%;
@@ -13,20 +17,22 @@
 }
 
 .fields {
-	min-width: 80%;
+	width: 80%;
 	border-radius: 10px;
 	padding: 12px 20px;
 	margin: 8px 0;
 	font-size: 16px;
+	resize: none;
 }
 
 #fact {
-	min-width: 80%;
+	width: 80%;
 	border-radius: 10px;
 	padding: 12px 20px;
 	margin: 8px 0;
 	font-size: 16px;
 	margin-bottom: 25%;
+	resize: none;
 }
 
 #submitButton {

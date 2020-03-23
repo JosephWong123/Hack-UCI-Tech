@@ -27,7 +27,8 @@ class Form extends React.Component {
 				<form>
 					<label for="nameField"> <b>Name</b> </label>
 					<br />
-					<input 
+					<textarea
+					rows="1" 
 					name="name"
 					placeholder="Name" 
 					value={this.state.name} 
@@ -38,7 +39,8 @@ class Form extends React.Component {
 					<br />
 					<label for="emailField"> <b>Email</b> </label>
 					<br />
-					<input 
+					<textarea
+					rows="1" 
 					name="email"
 					placeholder="Email" 
 					value={this.state.email} 
