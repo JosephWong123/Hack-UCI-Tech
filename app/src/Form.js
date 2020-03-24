@@ -31,9 +31,21 @@ class Form extends React.Component {
 		e.preventDefault();
 		const valid = this.checkValid();
 		if (valid) {
-			let submitted = "Successfully submitted application!";
+			// let submitted = "Successfully submitted application!";
 			this.clear();
-			this.setState({submitted});
+			// this.setState({submitted});
+			// I think it looks nicer without the above line commented out and no alert, but
+			// specifications said to use alert so I used alert.	
+			alert("Successfully submitted application!");
+			var url = 'https://hack-uci-test-endpoint.herokuapp.com/test?name=' + this.state.name + '&email=' + this.state.email + '&funfact=' + this.state.fact;  
+			console.log(url);
+			fetch(url)
+			  .then((response) => {
+			    return response.json();
+			  })
+			  .then((data) => {
+			    console.log(data);
+			  });
 			console.log(this.state);
 		}
 
