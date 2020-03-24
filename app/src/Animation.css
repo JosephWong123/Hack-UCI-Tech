@@ -1,0 +1,21 @@
+.animate {
+  margin: auto;
+  text-align: center;
+  animation: 4s linear 0s infinite move_petr;
+}
+
+img {
+  height: 200px;
+  width: auto;
+}
+
+@keyframes move_petr { from {
+    transform: rotate(0deg)
+               translate(30px)
+               rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg)
+               translate(30px) 
+               rotate(-360deg);
+  }  }

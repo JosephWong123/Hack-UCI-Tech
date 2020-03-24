@@ -3,11 +3,11 @@
 }
 
 #formBox {
-  border-radius: 10px;
+  border-radius: 15px;
   padding: 20px;
-  border: solid black 2px;
-  width: 15%;
+  width: 125%;
   position: relative;
+  background-color: white;
 }
 
 #title {
@@ -16,8 +16,17 @@
 	text-align: center;
 }
 
+.error {
+	font-size: 12px;
+	color: red;
+}
+
+.success {
+	font-size: 12px;
+	color: green;
+}
 .fields {
-	width: 80%;
+	width: 90%;
 	border-radius: 10px;
 	padding: 12px 20px;
 	margin: 8px 0;
@@ -26,19 +35,19 @@
 }
 
 #fact {
-	width: 80%;
+	width: 90%;
 	border-radius: 10px;
 	padding: 12px 20px;
 	margin: 8px 0;
 	font-size: 16px;
-	margin-bottom: 25%;
 	resize: none;
 }
 
 #submitButton {
-	border-radius: 10px;
-	background-color: #FF8C00;
-	padding: 10px 16px;
+	color: white;
+	border-radius: 20px;
+	background-color: #ff6c81;
+	padding: 10px 25px;
   	text-align: center;
   	font-size: 16px;
   	position: absolute;

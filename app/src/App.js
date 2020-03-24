@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
 import './App.css';
 import Form from './Form';
+import Animation from './Animation';
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App" id="form">
-        <Form />
-      </div>
+    	<div class="box">
+	      <div className="App" id="form">
+	        <Form />
+	      </div>
+	      <span class="animation">
+	      	<Animation />
+	      </span>
+      	</div>
     );
   }
 }
