@@ -37,7 +37,10 @@ class Form extends React.Component {
 			// I think it looks nicer without the above line commented out and no alert, but
 			// specifications said to use alert so I used alert.	
 			alert("Successfully submitted application!");
-			var url = 'https://hack-uci-test-endpoint.herokuapp.com/test?name=' + this.state.name + '&email=' + this.state.email + '&funfact=' + this.state.fact;  
+			 
+			var url = new URL("https://hack-uci-test-endpoint.herokuapp.com/test"),
+			    params = {name: this.state.name, email: this.state.email, funfact: this.state.fact};
+			Object.keys(params).forEach(key => url.searchParams.append(key, params[key])) 
 			fetch(url)
 			  .then((response) => {
 			    return response.json();
