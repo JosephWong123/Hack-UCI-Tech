@@ -38,7 +38,6 @@ class Form extends React.Component {
 			// specifications said to use alert so I used alert.	
 			alert("Successfully submitted application!");
 			var url = 'https://hack-uci-test-endpoint.herokuapp.com/test?name=' + this.state.name + '&email=' + this.state.email + '&funfact=' + this.state.fact;  
-			console.log(url);
 			fetch(url)
 			  .then((response) => {
 			    return response.json();
@@ -46,7 +45,6 @@ class Form extends React.Component {
 			  .then((data) => {
 			    console.log(data);
 			  });
-			console.log(this.state);
 		}
 
 	}
@@ -68,7 +66,7 @@ class Form extends React.Component {
 			nameError = '';
 		}
 
-		if (!this.state.email.includes('@')) {
+		if (!this.validateEmail()) {
 			emailError = 'Invalid email';
 		}
 
@@ -93,6 +91,11 @@ class Form extends React.Component {
 		}
 		return true;
 	}
+
+	validateEmail = () => {      
+	   var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+	   return emailPattern.test(this.state.email);
+ 	} 
 
 	render() {
 		return (
