@@ -3,21 +3,16 @@
 }
 
 .animation {
-  padding-left: 15%;
-  padding-top: 5%;
-  padding-right: 10%;
+  padding: 5%;
   text-align: center;
-  height: 100%;
-  width: auto;
   display: block;
-  flex: 1;
+  flex: 1 1;
 }
 
 #form {
   text-align: left;
-  padding-left: 7.5%;
-  padding-top: 7.5%;
-  padding-right: 2.5%;
+  padding: 7.5%;
+  width: 35%;
 }
 
 .box {
@@ -25,6 +20,7 @@
   align-items: center;
   flex-flow: row wrap;
   height: 100%;
+  flex: 1 1;
 }
 
 .App-logo {

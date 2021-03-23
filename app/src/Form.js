@@ -36,18 +36,24 @@ class Form extends React.Component {
 			// this.setState({submitted});
 			// I think it looks nicer without the above line commented out and no alert, but
 			// specifications said to use alert so I used alert.	
-			alert("Successfully submitted application!");
-			 
 			var url = new URL("https://hack-uci-test-endpoint.herokuapp.com/test"),
 			    params = {name: this.state.name, email: this.state.email, funfact: this.state.fact};
 			Object.keys(params).forEach(key => url.searchParams.append(key, params[key])) 
 			fetch(url)
 			  .then((response) => {
+			  	console.log(response.status)
+			    if (response.status === 200) {
+			    	alert("Successfully submitted application!");
+			    }
+			    else {
+			    	alert("An error occurred. Please try again.");
+			    }
 			    return response.json();
 			  })
 			  .then((data) => {
 			    console.log(data);
 			  });
+
 		}
 
 	}
@@ -104,9 +110,9 @@ class Form extends React.Component {
 		return (
 			<div id="formBox">
 				<p id="title"><b>Hack UCI Application</b></p>
-				<form id="form">
+				<form id="formFields">
 					<br />
-					<label for="nameField"> <b>Name</b> </label>
+					<label htmlFor="nameField"> <b>Name</b> </label>
 					<br />
 					<textarea
 					rows="1" 
@@ -114,13 +120,12 @@ class Form extends React.Component {
 					placeholder="Name" 
 					value={this.state.name} 
 					onChange={e => this.change(e)} 
-					class="fields"
+					className="fields"
 					id="nameField"
 					/>
-					<div class="error">{this.state.nameError}</div>
+					<div className="error">{this.state.nameError}</div>
 					<br />
-					<br />
-					<label for="emailField"> <b>Email</b> </label>
+					<label htmlFor="emailField"> <b>Email</b> </label>
 					<br />
 					<textarea
 					rows="1" 
@@ -128,25 +133,24 @@ class Form extends React.Component {
 					placeholder="Email" 
 					value={this.state.email} 
 					onChange={e => this.change(e)}
-					class="fields"
+					className="fields"
 					id="emailField" 
 					/>
-					<div class="error">{this.state.emailError}</div>
+					<div className="error">{this.state.emailError}</div>
 					<br />
-					<br />
-					<label for="fact"> <b>Fun Fact</b> </label>
+					<label htmlFor="fact"> <b>Fun Fact</b> </label>
 					<br />
 					<textarea
 					type="text"
-					rows="4" 
+					rows="6" 
 					name="fact"
 					placeholder="Fun Fact" 
 					value={this.state.fact} 
 					onChange={e => this.change(e)}
 					id="fact" 
 					/>
-					<div class="error">{this.state.factError}</div>
-					<div class="success">{this.state.submitted}</div>
+					<div className="error">{this.state.factError}</div>
+					<div className="success">{this.state.submitted}</div>
 					<br />
 					<br />
 					<button id="submitButton" onClick={e => this.onSubmit(e)}>Submit</button>

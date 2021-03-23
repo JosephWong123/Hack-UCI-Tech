@@ -5,9 +5,9 @@
 #formBox {
   border-radius: 15px;
   padding: 20px;
-  width: 125%;
   position: relative;
   background-color: white;
+  min-width: 200px;
 }
 
 #title {
@@ -26,31 +26,31 @@
 	color: green;
 }
 .fields {
-	width: 90%;
 	border-radius: 10px;
 	padding: 12px 20px;
 	margin: 8px 0;
 	font-size: 16px;
 	resize: none;
+	width: -webkit-fill-available;
 }
 
 #fact {
-	width: 90%;
 	border-radius: 10px;
 	padding: 12px 20px;
 	margin: 8px 0;
 	font-size: 16px;
 	resize: none;
+	width: -webkit-fill-available;
 }
 
 #submitButton {
 	color: white;
-	border-radius: 20px;
+	border-radius: 10px;
 	background-color: #ff6c81;
 	padding: 10px 25px;
   	text-align: center;
   	font-size: 16px;
   	position: absolute;
-  	right: 10px;
+  	right: 16px;
   	bottom: 10px;
 }

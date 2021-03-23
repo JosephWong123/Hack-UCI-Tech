@@ -7,11 +7,11 @@ import Animation from './Animation';
 class App extends Component {
   render() {
     return (
-    	<div class="box">
+    	<div className="box">
 	      <div className="App" id="form">
 	        <Form />
 	      </div>
-	      <span class="animation">
+	      <span className="animation">
 	      	<Animation />
 	      </span>
       	</div>

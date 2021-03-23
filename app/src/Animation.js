@@ -5,7 +5,7 @@ import logo from './petr.png';
 class Animation extends React.Component {
 	render() {
 		return(
-			<div class="animate">
+			<div className="animate">
 				<img src={logo} />
 			</div>
 		);
